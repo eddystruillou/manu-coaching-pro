@@ -18,11 +18,7 @@ nav {
     text-transform: uppercase;
     align-items: center;
     justify-content: space-between;
-
-    svg {
-        color: white;
-        stroke: white;
-    }
+    height: 5rem;
 
     ul {
         display: flex;
@@ -30,13 +26,15 @@ nav {
         padding: 0;
         margin: 0;
         list-style: none;
+        padding: 0 2rem;
+        position: relative;
 
         &:first-child {
             gap: 1rem;
         }
 
         &:last-child {
-            gap: .4rem;
+            gap: 1rem;
         }
     }
 
@@ -44,6 +42,9 @@ nav {
         display: flex;
         align-items: center;
         flex-direction: column;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -58,10 +59,13 @@ nav {
         margin: 0;
         line-height: 1;
         text-transform: uppercase;
-        font-size: calc(2rem + 1vw);
+        font-size: 3rem;
 
         &:last-child {
-            font-size: calc(1rem + .5vw);
+            color: transparent;
+            background-color: transparent;
+            font-size: 1.5rem;
+            -webkit-text-stroke: 1px white;
         }
     }
 }
