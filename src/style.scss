@@ -27,11 +27,11 @@ body {
     background: black;
     color: white;
     font-family: 'source_sans_pro', Arial, sans-serif;
+    padding: 0 2rem;
 }
 
 nav {
     display: flex;
-    width: 100%;
     text-transform: uppercase;
     align-items: center;
     justify-content: space-between;
@@ -44,8 +44,6 @@ nav {
         padding: 0;
         margin: 0;
         list-style: none;
-        padding: 0 2rem;
-        position: relative;
 
         &:first-child {
             gap: 1rem;
@@ -60,11 +58,22 @@ nav {
         display: flex;
         align-items: center;
         flex-direction: column;
-        position: absolute;
         font-family: 'bebas';
         font-size: 1.5rem;
-        left: 50%;
-        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 35em) {
+    nav {
+        ul {
+            position: fixed;
+            align-items: normal;
+            flex-direction: column;
+            inset: 0 0 0 40%;
+            padding: min(30vh, 8rem) 2em;
+            background: hsl(0 0% 100% / 0.1);
+            backdrop-filter: blur(1rem);
+        }
     }
 }
 
