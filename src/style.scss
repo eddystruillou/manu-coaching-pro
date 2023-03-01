@@ -35,6 +35,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     height: 5rem;
+    animation: navBarFadeIn 1s ease-in-out;
 
     ul {
         display: flex;
@@ -86,5 +87,16 @@ nav {
             font-size: 2rem;
             -webkit-text-stroke: .7px white;
         }
+    }
+}
+
+@keyframes navBarFadeIn {
+    0% {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
