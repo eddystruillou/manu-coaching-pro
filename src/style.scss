@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'bebas';
-    src: url('../public/fonts/bebasneue-regular-webfont.woff2') format('woff2'),
+    src: url('/fonts/bebasneue-regular-webfont.woff2') format('woff2'),
          url('../public/fonts/bebasneue-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'source_sans_pro';
-    src: url('../public/fonts/sourcesanspro-regular-webfont.woff2') format('woff2'),
+    src: url('/fonts/sourcesanspro-regular-webfont.woff2') format('woff2'),
          url('../public/fonts/sourcesanspro-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
@@ -28,6 +28,10 @@ body {
     color: white;
     font-family: 'source_sans_pro', Arial, sans-serif;
     padding: 1rem 2rem 0 2rem;
+}
+
+.mobile-nav-toggle {
+    display: none;
 }
 
 nav {
@@ -67,12 +71,37 @@ nav {
     nav {
         ul {
             position: fixed;
+            z-index: 1000;
             align-items: normal;
             flex-direction: column;
             inset: 0 0 0 40%;
             padding: min(30vh, 8rem) 2em;
-            background: hsl(0 0% 100% / 0.1);
-            backdrop-filter: blur(1rem);
+            background: hsl(0 0% 0% / 0.75);
+            
+            &:last-child {
+                gap: 2em;
+            }
+        }
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        width: 2rem;
+        background-color: transparent;
+        border: 0;
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    @supports (backdrop-filter: blur(1rem)) {
+        nav {
+            ul {
+                background: hsl(0 0% 100% / 0.1);
+                backdrop-filter: blur(1rem);
+            }
         }
     }
 }
