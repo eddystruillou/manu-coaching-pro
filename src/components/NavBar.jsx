@@ -1,6 +1,6 @@
 import React from "react";
 
-const Header = () => {
+const NavBar = () => {
   return (
     <header>
         <button className="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
@@ -24,4 +24,4 @@ const Header = () => {
   )
 }
   
-export default Header;
+export default NavBar;

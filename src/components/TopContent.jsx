@@ -1,6 +1,6 @@
 import React from "react";
 
-const Content = () => {
+const TopContent = () => {
   return (
     <main>
         <div className="top_content">
@@ -11,4 +11,4 @@ const Content = () => {
   )
 }
   
-export default Content;
+export default TopContent;
