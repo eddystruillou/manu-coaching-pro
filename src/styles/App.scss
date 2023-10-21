@@ -1,0 +1,100 @@
+header {
+    top: 0;
+    left: 0;
+    position: fixed;
+    padding: 8vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+    padding-top: 40px;
+    mix-blend-mode: difference;
+    background-color: none;
+    a {
+        color: white !important;
+        font-size: 16px;
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        a {
+            margin-left: 20px;
+        }
+    }
+}
+
+footer {
+    left: 0;
+    bottom: 40px;
+    nav {
+        display: flex;
+        align-items: center;
+        a {
+            margin-left: 0px;
+            margin-right: 22px;
+            img {
+                width: 24px;
+            }
+        }
+    }
+}
+
+h1 {
+    padding-left: 8vw;
+}
+
+.custom-bg {
+    width: 100vw;
+    height: 100vh;
+    background:url('./../images/background.jpg');
+    background-size: cover;
+    animation-name: zoomIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    div.black_filter {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%); 
+    }
+}
+
+.intro {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.highlights {
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw 8vw;
+    .programs {
+        .thumbnail {
+            width: 325px; // a revoir
+            height: 500px; // a revoir
+            cursor: pointer;
+            border: solid 4px rgba(28, 28, 28, 0.941);
+            &:hover {
+                scale: 1.05;
+                border: solid 4px rgb(255, 255, 255);
+            }
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        scale: 1;
+    }
+    100% {
+       scale: 1.06;
+    }
+}
