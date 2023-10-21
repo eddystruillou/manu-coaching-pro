@@ -17,17 +17,26 @@ function Home() {
         </div>
       </Parallax>
       <Parallax strength={600}>
-        <h1>Un accompagnement</h1>
         <section className="highlights">
-            <div className="programs">
-                <Thumbnail title="image 1"  number="001" name={img3}/>
+          <div className="container-cards">
+            <div className="heading-cards">
+              <h1>Un accompagnement</h1>
             </div>
-            <div className="programs">
-                <Thumbnail title="image 1"  number="001" name={img7}/>
+            <div className="grid-wrapper">
+                <div className="programs">
+                    <Thumbnail title="image 1"  number="001" name={img3}/>
+                </div>
+                <div className="programs">
+                    <Thumbnail title="image 1"  number="001" name={img7}/>
+                </div>
+                <div className="programs">
+                    <Thumbnail title="image 1"  number="001" name={img3}/>
+                </div>
+                <div className="programs">
+                    <Thumbnail title="image 1"  number="001" name={img7}/>
+                </div>
             </div>
-            <div className="programs">
-                <Thumbnail title="image 1"  number="001" name={img3}/>
-            </div>
+          </div>
         </section>
       </Parallax>
       <Footer/>
