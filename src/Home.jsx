@@ -1,8 +1,8 @@
 import Footer from './components/Footer.jsx'
-import Thumbnail from './components/Thumbnail.jsx'
+import Card from './components/Card/Card.jsx'
 import { Parallax, Background } from 'react-parallax';
-import img3 from './images/MSI2023.jpg';
-import img7 from './images/Paris.jpg';
+import improve from './images/improve.jpg';
+import festin from './images/festin.jpg';
 import './styles/App.scss';
 
 function Home() {
@@ -17,23 +17,23 @@ function Home() {
         </div>
       </Parallax>
       <Parallax strength={600}>
-        <section className="highlights">
+        <section className="cards-section">
           <div className="container-cards">
             <div className="heading-cards">
               <h1>Un accompagnement</h1>
             </div>
             <div className="grid-wrapper">
                 <div className="programs">
-                    <Thumbnail title="image 1"  number="001" name={img3}/>
+                    <Card title="image 1"  number="001" name={improve}/>
                 </div>
                 <div className="programs">
-                    <Thumbnail title="image 1"  number="001" name={img7}/>
+                    <Card title="image 1"  number="001" name={festin}/>
                 </div>
                 <div className="programs">
-                    <Thumbnail title="image 1"  number="001" name={img3}/>
+                    <Card title="image 1"  number="001" name={improve}/>
                 </div>
                 <div className="programs">
-                    <Thumbnail title="image 1"  number="001" name={img7}/>
+                    <Card title="image 1"  number="001" name={festin}/>
                 </div>
             </div>
           </div>

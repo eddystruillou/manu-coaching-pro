@@ -64,48 +64,26 @@ footer {
     align-items: center;
 }
 
-.thumbnail {
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  border-radius: 14px;
-  overflow: hidden;
-  img {
-    height: 420px;
-    border-radius: 14px 14px 0 0;
-  }
-  .card-text-block {
+section.cards-section {
+  .container-cards {
     display: flex;
     flex-direction: column;
-    row-gap: 6px;
-    padding-left: 14px;
-    padding-right: 14px;
-    .card-text {
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; // Trouver une font qui va bien
-    }
-  }
-}
-
-section.highlights {
-  .container-cards {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding-top: 100px;
-      padding-bottom: 100px;
-      row-gap: 80px;
-      .grid-wrapper {
-          display: grid;
-          grid-template-rows: auto;
-          grid-template-columns: 1fr 1fr 1fr 1fr;
-          column-gap: 20px;
-          .programs {
-            width: 293px;
-            height: 565px;
-            border-radius: 14px;
-          }
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    row-gap: 80px;
+    .grid-wrapper {
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 20px;
+      .programs {
+        width: 293px;
+        height: 565px;
+        border-radius: 14px;
       }
+    }
   }
 }
 
